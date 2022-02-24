@@ -1,7 +1,102 @@
-.example-spacer {
+.toolbar-spacer {
   flex: 1 1 auto;
 }
 
+.component-page-header {
+  display: flex;
+  padding-left: 20px;
+  /* padding-top: 15px; */
+  align-items: center;
+  background-color: #7b1fa2;
+  z-index: 0;
+}
+
+.component-page-header h1 {
+  font-weight: 300;
+  margin: 0;
+  padding: 28px 8px;
+  font-size: 20px;
+}
+
 mat-toolbar {
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  /* position: fixed; */
+  /* position: -webkit-sticky; */
+  /* top: 0; */
+  /* right: 0; */
+  /* z-index: 2; */
+  /* background-color: #7b1fa2; */
+  /* z-index: 1000; Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  margin-top: 56px;
+}
+
+.docs-component-viewer-sidenav-container {
+  flex: 1;
+  box-sizing: border-box;
+}
+.docs-component-sidenav-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.docs-component-sidenav-body-content {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.docs-component-sidenav-inner-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.docs-component-viewer-nav {
+  position: sticky;
+  top: 0;
+}
+.docs-component-viewer-nav .docs-component-viewer-nav-content {
+  width: 240px;
+  height: calc(100vh - 56px);
+  overflow: auto;
+}
+.docs-component-viewer-nav-content {
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+div .mat-list-base {
+  padding-top: 0;
+}
+
+.docs-component-viewer-nav .docs-component-viewer-nav-content a {
+  display: block;
+  text-decoration: none;
+}
+
+div.docs-component-viewer-nav-content
+  .mat-nav-list
+  .mat-list-item
+  .mat-list-item-content {
+  padding-left: 25px;
+}
+
+.docs-component-viewer-nav-content
+  a.docs-component-viewer-sidenav-item-selected {
+  background: rgba(123, 31, 162, 0.15);
+  color: rgb(199, 174, 209);
+}
+.docs-component-viewer-nav-content
+  a.docs-component-viewer-sidenav-item-selected:hover {
+  background: rgba(123, 31, 162, 0.3);
+}
+
+mat-sidenav-container {
+  /* margin-top: 56px;
+  overflow-y: auto; */
 }

@@ -9,7 +9,7 @@ import { Location, UpperCasePipe } from '@angular/common';
 export class AppComponent {
   title = 'App';
   pageName = 'Home';
-
+  showmenu = false;
   constructor(private location: Location) {
     if (location.path()) {
       this.pageName = location.path().slice(1);
