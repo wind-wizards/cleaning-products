@@ -1,0 +1,60 @@
+mat-icon {
+  font-size: 30px;
+  height: 64px;
+  width: 64px;
+  line-height: 64px;
+  color: #fff;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.link {
+  font-size: 1.375rem;
+}
+
+a .link {
+  font-weight: 500;
+}
+
+.svgpic {
+  position: absolute;
+  color: #7b1fa2;
+}
+.svgpic:hover {
+  color: white;
+}
+
+.grid-layout-custom {
+  width: 70vw;
+  height: 70vw;
+}
+
+.header {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+}
+
+.row-margin-30 {
+  margin-top: 12rem;
+}
+
+.txt {
+  font-weight: 0;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+@media (max-width: 640px) {
+  .txt {
+    font-size: 1.875rem;
+    line-height: 1.8rem;
+  }
+  .link {
+    font-size: 1.2rem;
+  }
+}

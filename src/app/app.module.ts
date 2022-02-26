@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductListComponent } from './Components/product-list/product-list.component';
 import { AboutComponent } from './Components/about/about.component';
 import { IndexComponent } from './Components/index/index.component';
+import { ContactComponent } from './Components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { IndexComponent } from './Components/index/index.component';
     ProductListComponent,
     AboutComponent,
     IndexComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

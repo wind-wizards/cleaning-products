@@ -78,23 +78,70 @@
 
   <div class="mat-elevation-z6" style="top:0; position:fixed; left: 0; right: 0; width: 100%; z-index: 2;">
     <mat-toolbar color="primary">
-      <button mat-icon-button >
-        <mat-icon>menu</mat-icon>
-      </button>
-      My Application
-      <span class="toolbar-spacer"></span>
-      My Account
+      <mat-toolbar-row>
+
+      
+        <span>Limpieza Limpia</span>
+          <div class="docs-navbar-header-item">
+            <a mat-button routerLinkActive="docs-navbar-header-item-selected" [routerLink]="'/home'"> Inicio </a>
+            <a mat-button routerLinkActive="docs-navbar-header-item-selected" [routerLink]="'/products'"> Productos </a>
+            <a mat-button routerLinkActive="docs-navbar-header-item-selected" [routerLink]="'/about'"> Acerca de</a>
+            <a mat-button routerLinkActive="docs-navbar-header-item-selected" class="docs-navbar-hide-small" [routerLink]="'/create-contact'"> Cafeteria </a>
+            <a mat-button routerLinkActive="docs-navbar-header-item-selected" class="docs-navbar-hide-small" [routerLink]="'/activities'"> Jarcery</a>
+            <a mat-button routerLinkActive="docs-navbar-header-item-selected" class="docs-navbar-hide-small" [routerLink]="'/create-activity'"> Clientes </a>
+            <a mat-button routerLinkActive="docs-navbar-header-item-selected" class="docs-navbar-hide-small" [routerLink]="'/contact'"> Contacto </a>
+          </div>
+        <span class="toolbar-spacer"></span>
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>share</mat-icon>
+          </button>
+      </mat-toolbar-row>
+      <mat-toolbar-row class="docs-navbar-show-row toolbar-spacer">
+        <div class="docs-navbar-header-item">
+          <a mat-button routerLinkActive="docs-navbar-header-item-selected"  [routerLink]="'/create-contact'"> Cafeteria </a>
+          <a mat-button routerLinkActive="docs-navbar-header-item-selected" [routerLink]="'/activities'"> Jarcery</a>
+          <a mat-button routerLinkActive="docs-navbar-header-item-selected" [routerLink]="'/create-activity'"> Clientes </a>
+          <a mat-button routerLinkActive="docs-navbar-header-item-selected" [routerLink]="'/contact'"> Contacto </a>
+        </div>
+      </mat-toolbar-row>
     </mat-toolbar>
   </div>
   
   <div class="sidenav">
     <mat-sidenav-container class="docs-component-viewer-sidenav-container">
-      <mat-sidenav-content ng-star-inserted>
+     
+      <mat-sidenav-content >
         <div class="docs-component-sidenav-content">
-          <header class="component-page-header" >
+          <header (click)="sidenav.toggle()" class="component-page-header" >
+            <button mat-icon-button class="sidenav-toggle ">
+              <mat-icon>menu</mat-icon>
+            </button>
+            
             <h1 style="color: white;">{{pageName | uppercase}}</h1>
           </header>
+          <div class="docs-component-sidenav-inner-content">
+            <main class="docs-component-sidenav-body-content ">
+             <div class="docs-component-viewer">
+               <router-outlet></router-outlet>
+              </div>
+            </main>
+            <footer class="docs-footer">
+              <div class="docs-footer-list">
+                <div class="docs-footer-logo">
+                  <img style="height: 50px;" src="../assets/shhh - copia.PNG" alt="" srcset="">
+                <span>
+                  <a>Limpieza Limpia</a>
+                </span>
+                </div>
+              </div>
+            </footer>
+          </div>  
+        </div>
+      </mat-sidenav-content>
 
+      
+      <mat-sidenav class="mat-sidenav-fixed docs-component-viewer-sidenav" #sidenav mode="over" closed style="top: 56px; bottom: 0px; transform:none; visibility:visible">
+        <div class="docs-component-sidenav-content">
           <div class="docs-component-sidenav-inner-content">
             <main class="docs-component-sidenav-body-content ">
               <div class="docs-component-viewer-nav">
@@ -123,12 +170,11 @@
                 </div>
               </div>
               
-              
-              <router-outlet></router-outlet>
-            </main>
-          </div>
-        </div>
-      </mat-sidenav-content>
+            </main>  
+          
+          </div>    
+        </div>      
+      </mat-sidenav>
     </mat-sidenav-container>
   </div>
 </div>
