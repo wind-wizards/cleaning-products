@@ -4,3 +4,19 @@
   margin-top: 5vw;
   margin-bottom: 5vw;
 }
+
+a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+a .txt_c:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.txt_c {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 2.5rem;
+}

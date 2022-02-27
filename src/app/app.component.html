@@ -1,87 +1,94 @@
+<!-- TEST VERSION -->
+
 <!-- 
-  <mat-toolbar color="primary">
-    <mat-toolbar-row class="mat-elevation-z6 " >
-      
-      <button mat-icon-button   (click)="sidenav.toggle()"  class="example-icon" aria-label="Example icon-button with menu icon"> 
-        <mat-icon>menu</mat-icon>
-      </button>
-      
-      
-<span>Cleaning Products</span>
-<div>
-  <a mat-button  [routerLink]="'/home'"> Home </a>
-  <a mat-button [routerLink]="'/products'"> Products </a>
-  <a mat-button [routerLink]="'/about'"> About Us</a>
-  <a mat-button [routerLink]="'/create-contact'"> Create Contact </a>
-  <a mat-button [routerLink]="'/activities'"> Activities </a>
-  <a mat-button [routerLink]="'/create-activity'"> Create Activity </a>
+<header  class="px-3 navbar navbar-expand navbar-dark flex-column bg-dark flex-md-row bd-navbar">
+  <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap"><svg class="d-block" width="36" height="36" viewBox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false"><title>Bootstrap</title><path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"></path><path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"></path></svg>
+  </a>
   
-</div>
-<span class="example-spacer"></span>
-
-<button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-  <mat-icon>favorite</mat-icon>
-</button>
-<button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-  <mat-icon>share</mat-icon>
-</button>
-</mat-toolbar-row>
-
-
-</mat-toolbar> -->
-
-<!-- <header class="component-page-header" >
-  <span><h1 style="color: white;">{{pageName | uppercase}}</h1></span>
+    <div class="navbar-nav-scroll">
+      <ul class="navbar-nav bd-navbar-nav flex-row">
+        <li class="nav-item">
+          <a class="nav-link " href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/docs/4.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/docs/4.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Examples</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://themes.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">Themes</a>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" href="https://expo.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');" target="_blank" rel="noopener">Expo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://blog.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');" target="_blank" rel="noopener">Blog</a>
+        </li>
+      </ul>
+    </div>
+  
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+      <li class="nav-item dropdown">
+        <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          v4.0
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+          <a class="dropdown-item" href="/docs/4.1/">Latest (v4.1.x)</a>
+          <a class="dropdown-item active" href="/docs/4.0/">v4.0.0</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="https://v4-alpha.getbootstrap.com/">v4 Alpha 6</a>
+          <a class="dropdown-item" href="https://getbootstrap.com/docs/3.3/">v3.3.7</a>
+          <a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a>
+        </div>
+      </li>
+  
+    
+    </ul>
+  
+    <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/bootstrap/archive/v4.0.0.zip">Download</a>
+  
 </header> -->
 
+<!-- 
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 db-sidebar">
+      <form  class="mt-3 bd-search d-flex align-items-center">
+        <span style="position: relative; display: inline-block; -moz-box-flex: 1; flex-shrink: 1;" dir="ltr" class="algolia-autocomplete">
+          <input style="vertical-align: top; position: relative;" dir="auto" type="search" id="id" class="form-control ds-input" placeholder="Search..."/>
+          <pre class="position:absolute; visibility: hidden; white-space:pre;"></pre>
+        </span>
+        <button data-toggle="collapse" data-target="#bd-docs-nav" class="btn btn-link d-md-none p-0 ml-3 collapsed">
+          <mat-icon>m</mat-icon>
+        </button>
+      </form>
+      <nav id="bd-docs-nav" class="bd-links">
+        <div class="bd-toc-item mt-4 mx-2 d-flex justify-content-left">
+          <a class="muted-text" style="color: rgba(0,0, 0, .65); font-weight: 500; text-decoration: none; font-size: 16px;"  href="/" class="bd-toc-link">Getting Started</a>
+        </div>
+        <div class="bd-toc-item mt-3 mx-2 d-flex justify-content-left" *ngFor="let num of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,1,1,1,1,1,1,1,1]">
+          <a class="muted-text" style="color: rgba(0,0, 0, .65); font-weight: 500; text-decoration: none; font-size: 16px;"  href="/" class="bd-toc-link">Getting Started</a>
+        </div>
+      </nav>
 
-<!-- <mat-sidenav-container hasBackdrop="true">    
-      
-      
-      <mat-sidenav #sidenav mode="side" closed  >
-        <mat-nav-list >
-              
-          <a mat-list-item [routerLink]="'/accounts'"> Bathroom </a>
-          <a mat-list-item [routerLink]="'/create-account'"> Windows </a>
-              <a mat-list-item [routerLink]="'/contacts'"> Wood </a>
-              <a mat-list-item [routerLink]="'/create-contact'"> Steel </a>
-              <a mat-list-item [routerLink]="'/activities'"> Floor </a>
-              <a mat-list-item [routerLink]="'/create-activity'"> Chlorine </a>
-              
-            </mat-nav-list>
-          </mat-sidenav>
-          
-          
-          <mat-sidenav-content > -->
-            <!-- <mat-toolbar class="secondRow"> -->
-              <!-- <header class="component-page-header" > -->
-                <!-- </header>s -->
-                <!-- </mat-toolbar>    -->
-                <!-- <header class="component-page-header" >
-                  <span><h1 style="color: white;">{{pageName | uppercase}}</h1></span>
-                </header> -->
-                <!-- </mat-sidenav-content> -->
-                
-                <!-- <mat-sidenav-content > -->
-                  
-                  <!-- <div style="height: 100vh;">
-                    <span><h1 style="color: white;">{{pageName | uppercase}}</h1></span>
-                <router-outlet></router-outlet>
-              </div>
-              
-            </mat-sidenav-content>
-  </mat-sidenav-container> -->
+    </div>
+  </div>
+</div> -->
 
-  
 
-<div style="display: flex; flex-direction:column; height: 100vh;">
+<!-- OFFICIAL WORKING VERSION-->
 
+<div class="flex-column" style="height: 100vh;"> 
+
+  <!-- Tool bar #1 -->
   <div class="mat-elevation-z6" style="top:0; position:fixed; left: 0; right: 0; width: 100%; z-index: 2;">
     <mat-toolbar color="primary">
       <mat-toolbar-row>
 
       
-        <span>Limpieza Limpia</span>
+        <span class="navbar-brand mr-0 mr-md-2">Limpieza Limpia</span>
           <div class="docs-navbar-header-item">
             <a mat-button routerLinkActive="docs-navbar-header-item-selected" [routerLink]="'/home'"> Inicio </a>
             <a mat-button routerLinkActive="docs-navbar-header-item-selected" [routerLink]="'/products'"> Productos </a>
@@ -107,6 +114,60 @@
     </mat-toolbar>
   </div>
   
+  <!-- Tool bar #2 -->
+  <!-- <header  class="mat-elevation-z6 px-3 navbar navbar-expand navbar-dark flex-column bg-dark flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap"><svg class="d-block" width="36" height="36" viewBox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false"><title>Bootstrap</title><path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"></path><path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"></path></svg>
+    </a>
+    
+      <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+          <li class="nav-item">
+            <a class="nav-link " href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/docs/4.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/docs/4.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Acerca de</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://themes.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">Cafeteria</a>
+          </li>
+    
+          <li class="nav-item">
+            <a class="nav-link" href="https://expo.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');" target="_blank" rel="noopener">Jarcery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://blog.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');" target="_blank" rel="noopener">Clientes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://blog.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');" target="_blank" rel="noopener">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    
+      <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <li class="nav-item dropdown">
+          <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            v4.0
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+            <a class="dropdown-item" href="/docs/4.1/">Latest (v4.1.x)</a>
+            <a class="dropdown-item active" href="/docs/4.0/">v4.0.0</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://v4-alpha.getbootstrap.com/">v4 Alpha 6</a>
+            <a class="dropdown-item" href="https://getbootstrap.com/docs/3.3/">v3.3.7</a>
+            <a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a>
+          </div>
+        </li>
+    
+      
+      </ul>
+    
+      <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/twbs/bootstrap/archive/v4.0.0.zip">Download</a>
+    
+  </header>  -->
+
   <div class="sidenav">
     <mat-sidenav-container class="docs-component-viewer-sidenav-container">
      
@@ -147,7 +208,6 @@
               <div class="docs-component-viewer-nav">
                 <div class="docs-component-viewer-nav-content">
                 
-                <!-- <mat-sidenav style="width: 230px;" mode="side" #sidenav closed position="start"> -->
                     <mat-nav-list>
                       <a class="mat-list-item mat-focus-indicator" routerLinkActive="docs-component-viewer-sidenav-item-selected"  [routerLink]="'/products'">
                         <span class="mat-list-item-content">
@@ -166,7 +226,7 @@
                         </span>
                       </a>
                     </mat-nav-list>
-                  <!-- </mat-sidenav> -->
+                  
                 </div>
               </div>
               
