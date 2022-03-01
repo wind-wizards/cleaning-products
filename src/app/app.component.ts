@@ -15,7 +15,9 @@ export class AppComponent {
   constructor(private router: Router) {
     this.router.events.subscribe((event) => {
       event instanceof NavigationEnd
-        ? (this.pageName = event.url.slice(1))
+        ? event.url == '/'
+          ? (this.pageName = 'Inicio')
+          : (this.pageName = event.url.slice(1))
         : 'page not found';
     });
   }
