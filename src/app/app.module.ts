@@ -1,21 +1,24 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatListModule } from '@angular/material/list';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatIconModule } from '@angular/material/icon';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
 import { ProductListComponent } from './Components/product-list/product-list.component';
 import { AboutComponent } from './Components/about/about.component';
 import { IndexComponent } from './Components/index/index.component';
 import { ContactComponent } from './Components/contact/contact.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AutocompleteComponent } from './Components/autocomplete/autocomplete.component';
 
 @NgModule({
   declarations: [
@@ -24,20 +27,23 @@ import { ContactComponent } from './Components/contact/contact.component';
     AboutComponent,
     IndexComponent,
     ContactComponent,
+    AutocompleteComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
     BrowserAnimationsModule,
+    MatCardModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule,
-    MatMenuModule,
-    MatGridListModule,
-    MatCardModule,
-    FlexLayoutModule,
     MatSidenavModule,
     MatListModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

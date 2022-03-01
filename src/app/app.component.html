@@ -51,8 +51,7 @@
   
 </header> -->
 
-<!-- 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <div class="row flex-xl-nowrap">
     <div class="col-12 col-md-3 col-xl-2 db-sidebar">
       <form  class="mt-3 bd-search d-flex align-items-center">
@@ -60,18 +59,18 @@
           <input style="vertical-align: top; position: relative;" dir="auto" type="search" id="id" class="form-control ds-input" placeholder="Search..."/>
           <pre class="position:absolute; visibility: hidden; white-space:pre;"></pre>
         </span>
-        <button data-toggle="collapse" data-target="#bd-docs-nav" class="btn btn-link d-md-none p-0 ml-3 collapsed">
-          <mat-icon>m</mat-icon>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" >
+          <mat-icon>menu </mat-icon>
         </button>
       </form>
-      <nav id="bd-docs-nav" class="bd-links">
+      <div  id="collapseExample"  class="collapse bd-links">
         <div class="bd-toc-item mt-4 mx-2 d-flex justify-content-left">
           <a class="muted-text" style="color: rgba(0,0, 0, .65); font-weight: 500; text-decoration: none; font-size: 16px;"  href="/" class="bd-toc-link">Getting Started</a>
         </div>
         <div class="bd-toc-item mt-3 mx-2 d-flex justify-content-left" *ngFor="let num of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,1,1,1,1,1,1,1,1]">
           <a class="muted-text" style="color: rgba(0,0, 0, .65); font-weight: 500; text-decoration: none; font-size: 16px;"  href="/" class="bd-toc-link">Getting Started</a>
         </div>
-      </nav>
+      </div>
 
     </div>
   </div>
@@ -173,12 +172,12 @@
      
       <mat-sidenav-content >
         <div class="docs-component-sidenav-content">
-          <header (click)="sidenav.toggle()" class="component-page-header" >
-            <button mat-icon-button class="sidenav-toggle ">
+          <header class="component-page-header" >
+            <button (click)="sidenav.toggle()" mat-icon-button class="sidenav-toggle ">
               <mat-icon>menu</mat-icon>
             </button>
-            
             <h1 style="color: white;">{{pageName | uppercase}}</h1>
+            <app-autocomplete></app-autocomplete>     
           </header>
           <div class="docs-component-sidenav-inner-content">
             <main class="docs-component-sidenav-body-content ">
@@ -211,8 +210,8 @@
                     <mat-nav-list>
                       <a class="mat-list-item mat-focus-indicator" routerLinkActive="docs-component-viewer-sidenav-item-selected"  [routerLink]="'/products'">
                         <span class="mat-list-item-content">
-                          <span class="mat-ripple mat-list-item-ripple"></span>
-                          Windows
+                          <span class="border-bottom m-1 mat-ripple mat-list-item-ripple"></span>
+                                  
                         </span>
                       </a>
                     </mat-nav-list>
