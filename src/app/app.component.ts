@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Location, UpperCasePipe } from '@angular/common';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +12,11 @@ export class AppComponent {
   title = 'App';
   pageName = 'Home';
 
-  constructor(private location: Location) {
-    if (this.location.path()) {
-      this.pageName = this.location.path().slice(1);
-    }
+  constructor(private router: Router) {
+    this.router.events.subscribe((event) => {
+      event instanceof NavigationEnd
+        ? (this.pageName = event.url.slice(1))
+        : 'page not found';
+    });
   }
 }
